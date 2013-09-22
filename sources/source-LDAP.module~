@@ -207,7 +207,7 @@ class LDAP extends superfecta_base {
             case LDAP_MEMOTOO:
                 // Memotoo does not like leading asterisks ("*").
                 // Superfecta strips the leading plus sign ("+"), but memotoo needs it.
-                $searchstr = "(|(telephoneNumber=+{$thenumber})(mobile=+{$thenumber}))";
+                $searchstr = "(|(telephoneNumber=+{$thenumber}))";
                 break;
         }
         $this->DebugEcho('<br />Search string: ' . $searchstr . '<br />', DEBUG_ALL);
